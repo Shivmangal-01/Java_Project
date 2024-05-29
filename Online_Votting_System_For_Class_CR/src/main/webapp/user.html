@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name">
+    <meta name="description" content="Voting System">
+    <title>Voting System</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+        }
+
+        select, input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            background-color: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Voting System</h1>
+    </header>
+
+    <form action="user" method="post" onsubmit="return validateForm()">
+        <label for="vote">Please Select Your Vote:</label>
+        <select name="vote" id="voteSelect" required>
+            <option value="" disabled selected hidden>Select a candidate</option>
+            <option value="Bjp">Bjp</option>
+            <option value="Congress">Congress</option>
+            <option value="kcr">KCR</option>
+        </select>
+
+        <label for="vId">Enter the Voting ID:</label>
+        <input type="text" name="vId" id="vId" required>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>

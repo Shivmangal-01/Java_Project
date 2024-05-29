@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Panel Creation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        label {
+            margin-top: 10px;
+            text-align: left;
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="panel" method="post">
+        <h1>Panel Creation</h1>
+        <label for="panelName">Panel Name:</label>
+        <input type="text" name="panelName" required>
+
+        <label for="panelSymbol">Panel Symbol:</label>
+        <input type="text" name="panelSymbol" required>
+
+        <label for="canditeName">Candidate Name:</label>
+        <input type="text" name="canditeName" required>
+
+        <label for="education">Education:</label>
+        <input type="text" name="education" required>
+
+        <label for="gender">Gender:</label>
+        <label>
+            Male<input type="radio" name="gender" value="male">
+        </label>
+
+        <label>
+            Female<input type="radio" name="gender" value="female">
+        </label>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            text-align: center;
+            margin: 50px;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 300px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #3498db;
+        }
+
+        label {
+            margin-top: 10px;
+            text-align: left;
+            width: 100%;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        input[type="submit"] {
+            padding: 10px 20px;
+            margin: 10px 0;
+            font-size: 16px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            background-color: #3498db;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form action="newRegister" onsubmit="return validateAge()" method="post">
+        <h1>Registration Form</h1>
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" required>
+
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" required>
+
+        <label for="emailId">Gmail:</label>
+        <input type="text" name="emailId" required>
+
+        <label for="password">Create Password:</label>
+        <input type="password" name="password" required>
+
+        <label for="age">Enter your Age:</label>
+        <input type="number" name="age" required>
+
+        <label for="cId">Enter your collegeId:</label>
+        <input type="text" name="cId">
+
+        <input type="submit" value="Submit" name="submit">
+    </form>
+
+</body>
+
+</html>
